@@ -1,7 +1,14 @@
-dependencies {
-	compile project(':core.worker')
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14'
+}
+
+dependencies {
 	compile 'com.github.boukefalos:jlibpipe:0.1'
+    compile 'com.github.boukefalos:jlibloader:0.2'
 
 	compile 'commons-io:commons-io:2.+'
 	compile 'commons-cli:commons-cli:1.+'	
@@ -11,4 +18,14 @@ dependencies {
 	compile 'org.ostermiller:utils:1.+'
 	compile 'com.googlecode.soundlibs:jlayer:1.+'
 	compile 'net.sf.javamusictag:jid3lib:0.+'
+    
+    repositories {
+        maven {
+            url 'https://github.com/Boukefalos/mimis/raw/mvn-repo/'
+        }
+        maven {
+            url 'https://github.com/Boukefalos/jlibloader/raw/mvn-repo/'
+        }
+        mavenCentral()
+    }
 }
