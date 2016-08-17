@@ -7,21 +7,24 @@ task wrapper(type: Wrapper) {
 }
 
 dependencies {
-	compile 'com.github.boukefalos:jlibpipe:0.1'
-    compile 'com.github.boukefalos:jlibloader:0.2'
+    compile 'com.github.boukefalos:jlibsox:0.2'
+    compile 'com.github.boukefalos:jlibpipe:0.1'
 
-	compile 'commons-io:commons-io:2.+'
-	compile 'commons-cli:commons-cli:1.+'
-	compile 'commons-pool:commons-pool:1.+'
-	compile 'org.slf4j:slf4j-api:1.+'
-	compile 'org.slf4j:slf4j-log4j12:1.7.5'
-	compile 'org.ostermiller:utils:1.+'
-	compile 'com.googlecode.soundlibs:jlayer:1.+'
-	compile 'net.sf.javamusictag:jid3lib:0.+'
-    
+    compile 'commons-io:commons-io:2.+'
+    compile 'commons-cli:commons-cli:1.+'
+    compile 'commons-pool:commons-pool:1.+'
+    compile 'org.slf4j:slf4j-api:1.+'
+    compile 'org.slf4j:slf4j-log4j12:1.7.5'
+    compile 'org.ostermiller:utils:1.+'
+    compile 'com.googlecode.soundlibs:jlayer:1.+'
+    compile 'net.sf.javamusictag:jid3lib:0.+'
+
     repositories {
         maven {
             url 'https://github.com/Boukefalos/jlibpipe/raw/mvn-repo/'
+        }
+        maven {
+            url 'https://github.com/Boukefalos/jlibsox/raw/mvn-repo/'
         }
         maven {
             url 'https://github.com/Boukefalos/jlibloader/raw/mvn-repo/'
